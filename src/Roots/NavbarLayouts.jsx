@@ -41,8 +41,8 @@ function NavbarRoot() {
 
   return (
     <>
-      <header className="container-w">
-        <nav className={`nav-w flex justify-around items-center px-4 py-4 fixed z-50 ${scrolled ? " bg-[#1b1b1b]" : "bg-transparent"}`}>
+      <header className={`container-w ${scrolled ? " bg-[#202020] shadow-md shadow-[#212121]" : "bg-transparent"}`}>
+        <nav className='nav-w flex justify-between items-center px-4 py-4'>
           <article className="flex items-center gap-16">
             <a href="/">
               <img width={125} src={Logo} alt="Logo" />

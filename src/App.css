@@ -5,9 +5,13 @@
 }
 
 .container-w {
-  max-width: 1300px;
-  margin: auto;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 50 !important;
 }
+
 
 body {
   background-color: rgb(153, 148, 137);
@@ -48,7 +52,8 @@ body {
 }
 
 .nav-w {
-  width: 1300px;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .lang {
@@ -95,7 +100,7 @@ body {
   position: absolute;
   top: 28%;
   left: 150px;
-  max-width: 37%;
+  max-width: 38%;
 }
 
 .title-Home svg {
