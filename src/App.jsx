@@ -12,7 +12,7 @@ import ProjectsComponent from "./Pages/ProjectsComponent";
 import MasterResidents from "./Pages/MasterResidents";
 import ResidentsComponent from "./Pages/ResidentsComponent";
 import MediaResidentsComp from "./Pages/MediaResidentsComp";
-import { faL, faVolumeLow } from "@fortawesome/free-solid-svg-icons";
+import { faVolumeLow } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 
 function App() {
@@ -228,8 +228,8 @@ function App() {
         <RouterProvider router={routes} />
 
             <div className="sound-wrapper">
+              <FontAwesomeIcon className="sounds" icon={faVolumeLow} onClick={toggleAudio}/>
               <p className="hover-sound">Background Sound</p>
-              <FontAwesomeIcon icon={faVolumeLow} onClick={toggleAudio}/>
             </div>
 
         {/* <div>

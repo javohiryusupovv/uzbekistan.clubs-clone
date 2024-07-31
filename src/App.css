@@ -5,7 +5,7 @@
 }
 
 .container-w {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .nav-w {
-  width: 1200px;
+  width: 1300px;
 }
 
 .lang {
@@ -68,7 +68,7 @@ body {
 }
 
 .nav-list .nav-child {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   cursor: pointer;
   color: white;
@@ -93,19 +93,21 @@ body {
 
 .title-Home {
   position: absolute;
-  top: 38%;
-  left: 100px;
-  max-width: 30%;
+  top: 28%;
+  left: 150px;
+  max-width: 37%;
 }
 
-.title-Home img {
-  margin-bottom: 50px;
+.title-Home svg {
+  width: 250px !important;
+  height: 120px !important;
+  margin-bottom: 40px;
 }
 
 .title-Home h3 {
   color: white;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 300;
 }
 .test-mode {
   display: flex;
@@ -162,24 +164,18 @@ body {
   z-index: 99;
 }
 
-.sound-wrapper:hover .hover-sound{
-  opacity: 1;
-  right: 38px !important;
-}
-
-.sound-wrapper svg{
+.sounds{
   font-size: 40px;
   color: #d5a863;
   cursor: pointer;
   animation: audioAnim 2s infinite;
   transition: all 1s;
 }
-
-
-
 .hover-sound{
   opacity: 0;
+  transform: scale(0.6);
   position: absolute;
+  top: 0;
   right: 0px;
   width: 200px;
   background-color: rgba(0, 0, 0, 0.502);
@@ -192,6 +188,12 @@ body {
   box-shadow: 0px 0px 2px white;
   transition: all 0.5s !important;
   z-index: -1;
+}
+
+.sounds:hover + .hover-sound{
+  right: 38px;
+  opacity: 1;
+  transform: scale(1);
 }
 
 
