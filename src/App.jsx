@@ -1,8 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import audio from '/public/Uzbekistonlik.m4a'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import audio from "/public/Uzbekistonlik.m4a";
 
 import "./App.css";
 import HomeComponent from "./Pages/HomeComponent";
@@ -14,25 +13,24 @@ import ResidentsComponent from "./Pages/ResidentsComponent";
 import MediaResidentsComp from "./Pages/MediaResidentsComp";
 import { faVolumeLow } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
+import LatestEpisode from "./Components/LatestEpisode";
 
 function App() {
-
   const [isplaying, setPlaying] = useState(false);
-  const audioRef = useRef(new Audio(audio))
+  const audioRef = useRef(new Audio(audio));
 
-  useEffect(()=> {
-    audioRef.current.volume = 0.2
-  }, [])
+  useEffect(() => {
+    audioRef.current.volume = 0.2;
+  }, []);
 
   const toggleAudio = () => {
-    if(isplaying){
+    if (isplaying) {
       audioRef.current.pause();
-    }else{
-      audioRef.current.play()
+    } else {
+      audioRef.current.play();
     }
-    setPlaying(!isplaying)
-  }
-
+    setPlaying(!isplaying);
+  };
 
   const routes = createBrowserRouter([
     {
@@ -44,7 +42,7 @@ function App() {
           element: [
             <>
               <HomeComponent />
-              <AboutComponent />
+              <LatestEpisode />
               <ProjectsComponent />
               <MasterResidents />
               <ResidentsComponent />
@@ -80,9 +78,9 @@ function App() {
     <>
       <div className="app">
         <div className="marquee-container">
-          <Marquee pauseOnHover speed={25} loop={0}>
+          <Marquee speed={25} loop={0}>
             <div className="test-mode">
-              <svg width="16" height="16" viewBox="0 0 21 20" fill="none">
+              <svg width="12" height="16" viewBox="0 0 21 20" fill="none">
                 <path
                   d="M5.21582 19.2035C6.31116 19.7347 7.57361 20 9.00253 20C11.0411 20 12.6796 19.3511 13.9182 18.0531C14.7736 17.1567 15.3336 15.9879 15.5981 14.5475L15.5569 14.5259C15.2656 14.3717 14.9941 14.1939 14.7421 13.9921C14.5788 15.137 14.1947 16.0433 13.5895 16.711C12.7607 17.6255 11.6127 18.0829 10.1457 18.0829C8.7549 18.0829 7.68295 17.6599 6.93044 16.8142C6.17793 15.9686 5.80164 14.592 5.80164 12.6843C5.80164 9.2138 5.77072 5.74177 5.8302 2.27158C5.8302 1.46499 6.19217 0.973341 6.91608 0.796591L7.71641 0.619721V0H0V0.619721L0.628817 0.766993C1.33363 0.963581 1.67862 1.44551 1.68618 2.2125C1.71927 5.51634 1.71486 8.81987 1.71486 12.1238C1.71486 14.0118 2.0245 15.5311 2.64351 16.6814C3.2628 17.8318 4.1202 18.6727 5.21582 19.2035Z"
                   fill="#FFFFFF"
@@ -221,16 +219,19 @@ function App() {
               </svg>
               <p>Sayt test rejimida ishlamoqda</p>
             </div> */}
-
           </Marquee>
         </div>
 
         <RouterProvider router={routes} />
 
-            <div className="sound-wrapper">
-              <FontAwesomeIcon className="sounds" icon={faVolumeLow} onClick={toggleAudio}/>
-              <p className="hover-sound">Background Sound</p>
-            </div>
+        <div className="sound-wrapper">
+          <FontAwesomeIcon
+            className="sounds"
+            icon={faVolumeLow}
+            onClick={toggleAudio}
+          />
+          <p className="hover-sound">Background Sound</p>
+        </div>
 
         {/* <div>
         <HomeComponent/>

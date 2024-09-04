@@ -1,0 +1,46 @@
+.episode-all p {
+  color: gray;
+}
+.episode-all svg {
+  width: 10px;
+  transition: all 0.2s linear;
+}
+.episode-all svg path {
+  fill: gray;
+}
+
+.episode-all:hover svg {
+  transform: translateX(10px);
+}
+.episode-all:hover svg path {
+  fill: white;
+}
+
+.content-Episode .episode-wrapper-img {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.content-Episode .episode-wrapper-img img {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+}
+.content-Episode .episode-wrapper-img::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(204, 151, 84, 0.28), rgba(184, 130, 52, 0.28));
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.content-Episode .episode-wrapper-img:hover img {
+  border: 1px solid orange;
+}
+.content-Episode .episode-wrapper-img:hover::before {
+  opacity: 1;
+}/*# sourceMappingURL=LatestEpisode.css.map */
