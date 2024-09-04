@@ -3,7 +3,7 @@
     color: gray;
   }
   svg {
-    width: 10px;
+    width: 9px;
     transition: all 0.2s linear;
     path {
       fill: gray;
@@ -11,8 +11,12 @@
   }
 }
 
+.episode-wrapper{
+  margin-bottom: 150px !important;
+}
+
 .episode-all:hover svg {
-  transform: translateX(10px);
+  transform: translateX(8px);
   path {
     fill: white;
   }
