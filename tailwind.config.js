@@ -13,7 +13,15 @@ export default {
       lg: "960px",
       xl: "1240px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        'border-color': "#fec775",
+        'textColor': '#fec775',
+      },
+      borderWidth: {
+        '1': '1px',
+      }
+    },
   },
   plugins: [],
 };

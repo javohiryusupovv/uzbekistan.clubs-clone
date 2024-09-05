@@ -14,7 +14,7 @@ import "../style/MasterResident.css";
 
 function MasterResident() {
   return (
-    <div className="container">
+    <div className="container mb-bottom">
       <article className="flex justify-between items-center mb-[35px]">
         <h1 className="text-5xl uppercase font-semibold text-white">
           Master residents

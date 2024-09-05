@@ -16,6 +16,7 @@ import { useEffect, useRef, useState } from "react";
 import LatestEpisode from "./Components/LatestEpisode";
 import MagazineTop from "./Components/MagazineTop";
 import MasterResident from './Components/MasterResident';
+import CompatriotNews from "./Components/CompatriotNews";
 
 function App() {
   const [isplaying, setPlaying] = useState(false);
@@ -47,6 +48,7 @@ function App() {
               <LatestEpisode />
               <MagazineTop/>
               <MasterResident/>
+              <CompatriotNews/>
               <ProjectsComponent />
               <ResidentsComponent />
               <MediaResidentsComp />
