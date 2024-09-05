@@ -8,13 +8,14 @@ import HomeComponent from "./Pages/HomeComponent";
 import NavbarRoot from "./Roots/NavbarLayouts";
 import AboutComponent from "./Pages/AboutComponent";
 import ProjectsComponent from "./Pages/ProjectsComponent";
-import MasterResidents from "./Pages/MasterResidents";
+// import MasterResidents from "./Pages/MasterResidents";
 import ResidentsComponent from "./Pages/ResidentsComponent";
 import MediaResidentsComp from "./Pages/MediaResidentsComp";
 import { faVolumeLow } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import LatestEpisode from "./Components/LatestEpisode";
 import MagazineTop from "./Components/MagazineTop";
+import MasterResident from './Components/MasterResident';
 
 function App() {
   const [isplaying, setPlaying] = useState(false);
@@ -45,8 +46,8 @@ function App() {
               <HomeComponent />
               <LatestEpisode />
               <MagazineTop/>
+              <MasterResident/>
               <ProjectsComponent />
-              <MasterResidents />
               <ResidentsComponent />
               <MediaResidentsComp />
             </>,
@@ -60,10 +61,10 @@ function App() {
           path: "/projects",
           element: <ProjectsComponent />,
         },
-        {
-          path: "/master-residents",
-          element: <MasterResidents />,
-        },
+        // {
+        //   path: "/master-residents",
+        //   element: <MasterResidents />,
+        // },
         {
           path: "/residents",
           element: <ResidentsComponent />,

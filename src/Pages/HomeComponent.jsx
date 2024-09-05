@@ -338,7 +338,7 @@ function HomeComponent() {
             muted="muted"
             playsInline
             src={Vide}
-            style={{ transition: "all 0.3s" }}
+            style={{ transition: "all 0.4s" }}
             alt=""
           />
           <img className="card-img" src={img1} alt="" />

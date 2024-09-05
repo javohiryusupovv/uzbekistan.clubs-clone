@@ -4,7 +4,7 @@ export default {
   theme: {
     container: {
       padding: {
-        DEFAULT: "15px",
+        DEFAULT: "5px",
       },
     },
     screens: {

@@ -27,46 +27,46 @@ function MagazineTop() {
             <div className="img-mask"></div>
             <img src={top1} alt="" />
           </article>
-          <p className="text-white font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
+          <p className="text-white text-[15px] font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
         </div>
         <div className="child-top">
-          <article className="magazine-child">
+          <article className="magazine-child mb-4">
             <div className="img-mask"></div>
             <img src={top2} alt="" />
           </article>
-          <p className="text-white font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
+          <p className="text-white text-[17px] font-medium">Granny, Mommy and I</p>
 
         </div>
         <div className="child-top">
-          <article className="magazine-child">
+          <article className="magazine-child mb-4">
             <div className="img-mask"></div>
             <img src={top3} alt="" />
           </article>
-          <p className="text-white font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
+          <p className="text-white text-[17px] font-medium">Muzaffar Jalolovs truths of life</p>
 
         </div>
         <div className="child-top">
-          <article className="magazine-child">
+          <article className="magazine-child mb-4">
             <div className="img-mask"></div>
             <img src={top4} alt="" />
           </article>
-          <p className="text-white font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
+          <p className="text-white text-[17px] font-medium">Otabek Nuritdinov’s life path full of twists and turns</p>
 
         </div>
         <div className="child-top">
-          <article className="magazine-child">
+          <article className="magazine-child mb-4">
             <div className="img-mask"></div>
             <img src={top5} alt="" />
           </article>
-          <p className="text-white font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
+          <p className="text-white text-[17px] font-medium">Behzod Abduraimov. A global citizen</p>
 
         </div>
         <div className="child-top">
-          <article className="magazine-child">
+          <article className="magazine-child mb-4">
             <div className="img-mask"></div>
             <img src={top6} alt="" />
           </article>
-          <p className="text-white font-medium">UZBEKISTAN’S CLUB MAGAZINE</p>
+          <p className="text-white text-[17px] font-medium">Khilola Umarova: The only girl and a class president</p>
 
         </div>
       </div>
