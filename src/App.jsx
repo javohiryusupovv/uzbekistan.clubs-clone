@@ -14,6 +14,7 @@ import MediaResidentsComp from "./Pages/MediaResidentsComp";
 import { faVolumeLow } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import LatestEpisode from "./Components/LatestEpisode";
+import MagazineTop from "./Components/MagazineTop";
 
 function App() {
   const [isplaying, setPlaying] = useState(false);
@@ -43,6 +44,7 @@ function App() {
             <>
               <HomeComponent />
               <LatestEpisode />
+              <MagazineTop/>
               <ProjectsComponent />
               <MasterResidents />
               <ResidentsComponent />

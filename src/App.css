@@ -10,6 +10,15 @@
   margin: auto !important;
 }
 
+.mb-bottom{
+  margin-bottom: 100px !important;
+}
+
+.container-v{
+  max-width: 1240px;
+  margin: auto !important;
+}
+
 .container-w {
   position: fixed !important;
   left: 0;
