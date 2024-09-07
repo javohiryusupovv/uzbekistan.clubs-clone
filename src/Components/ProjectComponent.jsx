@@ -3,7 +3,9 @@ import img2 from "/public/Assests/projects2.jpg";
 import img3 from "/public/Assests/projects3.jpg";
 import img4 from "/public/Assests/projects4.jpg";
 
-function Porjects() {
+import '../style/Projects.css'
+
+function ProjectComponent() {
   return (
     <>
       <div className="py-[50px]">
@@ -22,14 +24,14 @@ function Porjects() {
           <div className="grid grid-cols-3 gap-[20px]">
             <a href="#1">
               <div className="group relative left-0 top-0 w-full h-[303px] overflow-hidden">
-                <div className="absolute top-0 left-0"></div>
-                <div className="absolute w-full h-full">
-                  <img className="w-full rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
+                <div className="absolute top-0 left-0 w-full h-full z-40 group-hover:bg-customColor transition-all duration-300"></div>
+                <div className="absolute left-0 top-0 z-20 w-full h-full">
+                  <img className="w-full h-[230px] rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:!h-[303px] transition-all duration-700"
                     src={img1}
                     alt=""/>
                 </div>
-                <div className="absolute bottom-3 left-4">
-                  <h3 className="text-[22px] text-white font-semibold uppercase">
+                <div className="absolute bottom-3 z-20 left-4">
+                  <h3 className="text-[20px] text-white font-semibold uppercase">
                     O'zbekistonlik
                   </h3>
                   <p className="text-[17px] transition-all duration-200 text-[#808080] group-hover:text-[#f3bc6b]">
@@ -40,14 +42,14 @@ function Porjects() {
             </a>
             <a href="#2">
               <div className="group relative left-0 top-0 w-full h-[303px] overflow-hidden">
-                <div className="absolute top-0 left-0"></div>
+              <div className="absolute top-0 left-0 w-full h-full z-40 group-hover:bg-customColor transition-all duration-300"></div>
                 <div className="absolute w-full h-full">
-                  <img className="w-full rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
+                  <img className="w-full h-[230px] rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
                     src={img2}
                     alt=""/>
                 </div>
                 <div className="absolute bottom-3 left-4">
-                  <h3 className="text-[22px] text-white font-semibold uppercase">
+                  <h3 className="text-[20px] text-white font-semibold uppercase">
                     food
                   </h3>
                   <p className="text-[17px] transition-all duration-200 text-[#808080] group-hover:text-[#f3bc6b]">
@@ -58,14 +60,14 @@ function Porjects() {
             </a>
             <a href="#3">
               <div className="group relative left-0 top-0 w-full h-[303px] overflow-hidden">
-                <div className="absolute top-0 left-0"></div>
+              <div className="absolute top-0 left-0 w-full h-full z-40 group-hover:bg-customColor transition-all duration-300"></div>
                 <div className="absolute w-full h-full">
-                  <img className="w-full rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
-                    src={img1}
+                  <img className="w-full h-[230px] rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
+                    src={img3}
                     alt=""/>
                 </div>
                 <div className="absolute bottom-3 left-4">
-                  <h3 className="text-[22px] text-white font-semibold uppercase">
+                  <h3 className="text-[20px] text-white font-semibold uppercase">
                     Students
                   </h3>
                   <p className="text-[17px] transition-all duration-200 text-[#808080] group-hover:text-[#f3bc6b]">
@@ -76,14 +78,14 @@ function Porjects() {
             </a>
             <a href="#4">
               <div className="group relative left-0 top-0 w-full h-[303px] overflow-hidden">
-                <div className="absolute top-0 left-0"></div>
+              <div className="absolute top-0 left-0 w-full h-full z-40 group-hover:bg-customColor transition-all duration-300"></div>
                 <div className="absolute w-full h-full">
-                  <img className="w-full rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
+                  <img className="w-full h-[230px] rounded-xl scale-[0.9] object-cover group-hover:rounded-none group-hover:scale-[1] group-hover:h-[303px] transition-all duration-700"
                     src={img4}
                     alt=""/>
                 </div>
                 <div className="absolute bottom-3 left-4">
-                  <h3 className="text-[22px] text-white font-semibold">
+                  <h3 className="text-[20px] text-white font-semibold">
                     Podcast
                   </h3>
                   <p className="text-[17px] transition-all duration-200 text-[#808080] group-hover:text-[#f3bc6b]">
@@ -98,7 +100,7 @@ function Porjects() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Porjects;
+export default ProjectComponent

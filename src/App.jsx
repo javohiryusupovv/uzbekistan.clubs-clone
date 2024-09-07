@@ -17,7 +17,8 @@ import LatestEpisode from "./Components/LatestEpisode";
 import MagazineTop from "./Components/MagazineTop";
 import MasterResident from './Components/MasterResident';
 import CompatriotNews from "./Components/CompatriotNews";
-import Porjects from "./Components/Porjects";
+import Projects from "./Components/Projects";
+import ProjectComponent from './Components/ProjectComponent';
 
 function App() {
   const [isplaying, setPlaying] = useState(false);
@@ -50,7 +51,7 @@ function App() {
               <MagazineTop/>
               <MasterResident/>
               <CompatriotNews/>
-              <Porjects/>
+              <ProjectComponent/>
               <ProjectsComponent />
               <ResidentsComponent />
               <MediaResidentsComp />
