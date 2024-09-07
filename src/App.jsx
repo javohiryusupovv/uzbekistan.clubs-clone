@@ -17,7 +17,6 @@ import LatestEpisode from "./Components/LatestEpisode";
 import MagazineTop from "./Components/MagazineTop";
 import MasterResident from './Components/MasterResident';
 import CompatriotNews from "./Components/CompatriotNews";
-import Projects from "./Components/Projects";
 import ProjectComponent from './Components/ProjectComponent';
 
 function App() {
@@ -52,7 +51,6 @@ function App() {
               <MasterResident/>
               <CompatriotNews/>
               <ProjectComponent/>
-              <ProjectsComponent />
               <ResidentsComponent />
               <MediaResidentsComp />
             </>,

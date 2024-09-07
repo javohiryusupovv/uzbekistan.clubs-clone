@@ -3,7 +3,6 @@ import img2 from "/public/Assests/projects2.jpg";
 import img3 from "/public/Assests/projects3.jpg";
 import img4 from "/public/Assests/projects4.jpg";
 
-import '../style/Projects.css'
 
 function ProjectComponent() {
   return (
