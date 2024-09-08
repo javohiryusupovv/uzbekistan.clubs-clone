@@ -1,8 +1,22 @@
+import { useEffect, useState } from "react";
 import "../style/LatestEpisode.css";
 
 import EpisodeUzbekistanClub from "/public/SecondImg.jpg";
 
 export default function LatestEpisode() {
+  const [episode, setEpisode] = useState([]);
+
+  useEffect(() => {
+    fetch("https://uzbekistans.club/api/v1/banners_mobile/")
+      .then((respones) => respones.json())
+      .then((data) => {
+        if (data.results.length > 0) {
+          setEpisode(data.results[0].banner);
+        }
+      })
+      .catch((error) => console.error('Error fetching data:', error))
+  }, []);
+
   return (
     <div className="container-v episode-wrapper">
       <article className="flex justify-between mb-[35px]">
@@ -19,7 +33,16 @@ export default function LatestEpisode() {
       <div className="content-Episode flex gap-[40px]">
         <a className="episode-wrapper-img" href="#1">
           <div className="filt"></div>
-          <img width={"900px"} src={EpisodeUzbekistanClub} alt="" />
+          {episode ? (
+            <img
+              className="w-full h-[230px] rounded-xl object-cover"
+              src={episode}
+              alt="Banner"
+            />
+          ) : (
+            <p>No banner available</p>
+          )}
+          {/* <img width={"900px"} src={episod.banner[0]} alt="" /> */}
         </a>
         <div className="Episode-List-Wrapper">
           <article className="mb-5">

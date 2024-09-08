@@ -66,8 +66,8 @@ function NavbarRoot() {
               ))}
             </ul>
           </article>
-          <div>
-            <article className="flex items-center gap-3 px-3 py-2 rounded-3xl cursor-pointer lang">
+          <div className="relative top-0 left-0">
+            <article className="flex items-center bg-red-200 gap-3 px-3 py-2 rounded-3xl cursor-pointer lang">
               <svg className="w-5" viewBox="0 0 512 512">
                 <path
                   fill="white"
@@ -76,6 +76,10 @@ function NavbarRoot() {
               </svg>
               <p className="text-white uppercase font-bold text-sm">English</p>
             </article>
+            <ul className=" absolute top-10 right-0 w-[200px] overflow-hidden bg-[#141414] rounded-2xl flex flex-col justify-between">
+              <li className="text-[20px] py-2 text-center border-b border-[#333232] cursor-pointer text-white group-hover:bg-[#4b4a49]">O'zbek</li>
+              <li className="text-[20px] py-2 text-center border-b border-[#2b2a2a] cursor-pointer text-white group-hover:bg-[#484847]">English</li>
+            </ul>
           </div>
         </nav>
       </header>
