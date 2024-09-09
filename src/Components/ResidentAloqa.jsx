@@ -2,7 +2,7 @@ import imgResident from "/public/Assests/residents.png";
 
 function ResidentAloqa() {
   return (
-    <div className="pb-56">
+    <div className="pb-20">
       <div className="container">
         <div className="relative left-0 top-0">
           <div className="absolute left-1/2 top-2/4 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center gap-5">

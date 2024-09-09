@@ -34,7 +34,7 @@ function MagazineTop() {
             <div className="img-mask"></div>
             <img src={top2} alt="" />
           </article>
-          <p className="text-white text-[17px] font-medium">Granny, Mommy and I</p>
+          <p className="text-white text-[17px] font-medium line-clamp-2">Granny, Mommy and I</p>
 
         </div>
         <div className="child-top">
@@ -42,7 +42,7 @@ function MagazineTop() {
             <div className="img-mask"></div>
             <img src={top3} alt="" />
           </article>
-          <p className="text-white text-[17px] font-medium">Muzaffar Jalolovs truths of life</p>
+          <p className="text-white text-[17px] font-medium line-clamp-2">Muzaffar Jalolovs truths of life</p>
 
         </div>
         <div className="child-top">
@@ -50,7 +50,7 @@ function MagazineTop() {
             <div className="img-mask"></div>
             <img src={top4} alt="" />
           </article>
-          <p className="text-white text-[17px] font-medium">Otabek Nuritdinov’s life path full of twists and turns</p>
+          <p className="text-white text-[17px] font-medium line-clamp-2">Otabek Nuritdinov’s life path full of twists and turns</p>
 
         </div>
         <div className="child-top">
@@ -58,7 +58,7 @@ function MagazineTop() {
             <div className="img-mask"></div>
             <img src={top5} alt="" />
           </article>
-          <p className="text-white text-[17px] font-medium">Behzod Abduraimov. A global citizen</p>
+          <p className="text-white text-[17px] font-medium line-clamp-2">Behzod Abduraimov. A global citizen</p>
 
         </div>
         <div className="child-top">
@@ -66,7 +66,7 @@ function MagazineTop() {
             <div className="img-mask"></div>
             <img src={top6} alt="" />
           </article>
-          <p className="text-white text-[17px] font-medium">Khilola Umarova: The only girl and a class president</p>
+          <p className="text-white text-[17px] font-medium line-clamp-2">Khilola Umarova: The only girl and a class president</p>
 
         </div>
       </div>

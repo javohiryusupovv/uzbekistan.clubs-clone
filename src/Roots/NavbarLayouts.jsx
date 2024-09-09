@@ -2,46 +2,51 @@ import { Outlet, Link } from "react-router-dom";
 import Logo from "/public/Assests/img/logo.svg";
 import { useEffect, useState } from "react";
 
+import facebook from "/public/messengerIcon/facebook.svg";
+import instagram from "/public/messengerIcon/instagram.svg";
+import telegram from "/public/messengerIcon/telegram.svg";
+import youtube from "/public/messengerIcon/youtube.svg";
+import bgLogo from "/public/backgroundLogo.svg";
 
-import './style.css'
-import { faL, fas } from "@fortawesome/free-solid-svg-icons";
+import "./style.css";
 
 function NavbarRoot() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [isactive, setisActive] = useState(false);
-  const [selectLanguage, setSelectLanguage] = useState("English")
-
+  const [selectLanguage, setSelectLanguage] = useState("English");
 
   const handleLanguageOutside = (event) => {
-    if(!event.target.closest('.language-wrapper') && !event.target.closest('.lang')) {
-      setisActive(false)
+    if (
+      !event.target.closest(".language-wrapper") &&
+      !event.target.closest(".lang")
+    ) {
+      setisActive(false);
     }
-  }
+  };
 
   const handleChangeLang = (lang) => {
-      setSelectLanguage(lang);
-      setisActive(false)
-  }
+    setSelectLanguage(lang);
+    setisActive(false);
+  };
 
-  useEffect(()=> {
+  useEffect(() => {
     //Navbardagi 900px scroll bolgan vaqti qotadigan scroll kodi
     const handleScroll = () => {
-      if(window.scrollY > 900){
-        setScrolled(true)
-      }else{
-        setScrolled(false)
+      if (window.scrollY > 900) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
       }
-    }
+    };
 
-    document.addEventListener('click', handleLanguageOutside)
-    window.addEventListener('scroll', handleScroll)
-    return() => {
-      window.addEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleLanguageOutside)
-    }
-
-  }, [])
+    document.addEventListener("click", handleLanguageOutside);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleLanguageOutside);
+    };
+  }, []);
 
   const handleMouseOver = (index) => {
     setHoveredIndex(index);
@@ -61,8 +66,14 @@ function NavbarRoot() {
 
   return (
     <>
-      <header className={`container-w ${scrolled ? " bg-[#202020] shadow-md shadow-[#212121]" : "bg-transparent"}`}>
-        <nav className='nav-w flex justify-between items-center px-4 py-4'>
+      <header
+        className={`container-w ${
+          scrolled
+            ? " bg-[#202020] shadow-md shadow-[#212121]"
+            : "bg-transparent"
+        }`}
+      >
+        <nav className="nav-w flex justify-between items-center px-4 py-4">
           <article className="flex items-center gap-16">
             <a href="/">
               <img width={125} src={Logo} alt="Logo" />
@@ -87,18 +98,45 @@ function NavbarRoot() {
             </ul>
           </article>
           <div className="relative top-0 left-0">
-            <article onClick={()=> setisActive(!isactive)}  className="flex items-center gap-3 px-6 py-3 rounded-3xl cursor-pointer lang">
+            <article
+              onClick={() => setisActive(!isactive)}
+              className="flex items-center gap-3 px-6 py-2 rounded-3xl cursor-pointer lang"
+            >
               <svg className="w-5" viewBox="0 0 512 512">
                 <path
                   fill="white"
                   d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"
                 />
               </svg>
-              <p className="text-white uppercase font-bold text-sm">{selectLanguage}</p>
+              <p className="text-white uppercase font-bold text-sm">
+                {selectLanguage}
+              </p>
             </article>
-            <ul className={`absolute top-14 right-0 w-[200px] overflow-hidden bg-[#141414] rounded-2xl flex flex-col justify-between language-wrapper ${isactive ? 'active' : ''}`}>
-              <li onClick={()=> handleChangeLang("O'zbek")} className={`text-[17px] py-3 text-center uppercase border-b border-[#333232] cursor-pointer text-[#919090] lang ${selectLanguage === "O'zbek" ? "text-[#d5a863]" : 'text-[#919090]'}`}>O'zbek</li>
-              <li onClick={()=> handleChangeLang("English")} className={`text-[17px] py-3 text-center uppercase border-b border-[#2b2a2a] cursor-pointer text-[#919090] lang ${selectLanguage === "English" ? 'text-[#d5a863]' : 'text-[#919090]'}`}>English</li>
+            <ul
+              className={`absolute top-14 right-0 w-[170px] overflow-hidden bg-[#141414] rounded-2xl flex flex-col justify-between language-wrapper ${
+                isactive ? "active" : ""
+              }`}
+            >
+              <li
+                onClick={() => handleChangeLang("O'zbek")}
+                className={`text-[17px] py-2 text-center uppercase border-b border-[#333232] cursor-pointer text-[#919090] lang ${
+                  selectLanguage === "O'zbek"
+                    ? "text-[#d5a863]"
+                    : "text-[#919090]"
+                }`}
+              >
+                O'zbek
+              </li>
+              <li
+                onClick={() => handleChangeLang("English")}
+                className={`text-[17px] py-2 text-center uppercase border-b border-[#2b2a2a] cursor-pointer text-[#919090] lang ${
+                  selectLanguage === "English"
+                    ? "text-[#d5a863]"
+                    : "text-[#919090]"
+                }`}
+              >
+                English
+              </li>
             </ul>
           </div>
         </nav>
@@ -106,7 +144,92 @@ function NavbarRoot() {
       <main>
         <Outlet />
       </main>
-      <footer></footer>
+      <footer className="pt-10 pb-11 bg-[#1b1b1b]">
+        <div className="relative top-0 left-0 overflow-hidden">
+          <div className="container overflow-hidden">
+            <a href="/" className="inline-flex w-full text-center">
+              <img className="m-auto" src={Logo} alt="" />
+            </a>
+            <article className="my-6">
+              <ul className="flex justify-center gap-14">
+                <li className="uppercase font-normal text-[#767a7b] hover:text-textColor transition-all duration-300 cursor-pointer">
+                  Become a resident
+                </li>
+                <li className="uppercase font-normal text-[#767a7b] hover:text-textColor transition-all duration-300 cursor-pointer">
+                  Privacy Policy
+                </li>
+                <li className="uppercase font-normal text-[#767a7b] hover:text-textColor transition-all duration-300 cursor-pointer">
+                  Faq
+                </li>
+              </ul>
+            </article>
+            <p className="my-6 text-center px-20 text-[#767a7b]">
+              Uzbekistan's club is a global network for successful Uzbekistanis
+              who have achieved great accomplishments worldwide. We produce
+              exclusive, high-quality, and impactful content to inspire young
+              people. We undertake large-scale, multi-faceted projects to guide
+              the next generation in their journeys toward becoming world-class
+              professionals. Join the brain trust of individuals from Tokyo to
+              Toronto, San Francisco to Singapore, united by a common homeland
+              and shared values. All copyright associated with Uzbekistan's club
+              belongs to NGO Uzbekistan's club.
+            </p>
+            <article className="flex items-center justify-center gap-5 my-7">
+              <a
+                href="https://www.facebook.com/uzbekistansclub/"
+                target="_blank"
+              >
+                <img
+                  className="w-[25px] grayscale-[100%] transition-all duration-300 hover:grayscale-0"
+                  src={facebook}
+                  alt="uzbekistanClub facebook"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/c/Uzbekistansclub"
+                target="_blank"
+              >
+                <img
+                  className="w-[35px] grayscale-[100%] transition-all duration-300 hover:grayscale-0"
+                  src={youtube}
+                  alt="uzbekistanClub youtube"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/uzbekistansclub/"
+                target="_blank"
+              >
+                <img
+                  className="w-[25px] grayscale-[100%] transition-all duration-300 hover:grayscale-0"
+                  src={instagram}
+                  alt="uzbekistanClub instagram"
+                />
+              </a>
+              <a href="https://t.me/uzbekistansclub" target="_blank">
+                <img
+                  className="w-[25px] grayscale-[100%] transition-all duration-300 hover:grayscale-0"
+                  src={telegram}
+                  alt="uzbekistanClub telegram"
+                />
+              </a>
+            </article>
+            <hr className="my-6 opacity-[0.2] rounded-3xl" />
+            <article className="flex justify-between">
+              <p className="font-mono font-semibold text-[#767a7b]">
+                Uzbekistan’s club © 2023. All rights reserved.
+              </p>
+              <div>
+                <p className="font-mono font-semibold text-[#767a7b]">
+                  Developed by: <span className="font-mono font-semibold text-textColor">UIC Group</span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div className="absolute right-[-30px] bottom-[-130px]">
+            <img width={350} className=" opacity-[0.1]" src={bgLogo} alt="" />
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

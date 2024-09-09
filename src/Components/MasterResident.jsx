@@ -1,15 +1,3 @@
-import img1 from "/public/Assests/masterResident/img2.jpg";
-import img2 from "/public/Assests/masterResident/img5.jpg";
-import img3 from "/public/Assests/masterResident/img3.jpg";
-import img4 from "/public/Assests/masterResident/img4.jpg";
-import img5 from "/public/Assests/masterResident/img1.jpg";
-import img6 from "/public/Assests/masterResident/img6.jpg";
-import img7 from "/public/Assests/masterResident/img7.jpg";
-import img8 from "/public/Assests/masterResident/img8.jpg";
-import img9 from "/public/Assests/masterResident/img9.jpg";
-import img10 from "/public/Assests/masterResident/img10.jpg";
-import img11 from "/public/Assests/masterResident/img11.jpg";
-
 import "../style/MasterResident.css";
 import { useEffect, useState } from "react";
 
@@ -90,10 +78,10 @@ function MasterResident() {
             <div className="absolute left-0 top-0 resident-img cursor-pointer"></div>
             <img className="w-full h-full object-cover rounded-[10px]" src={getImgRendering(9)} alt="" />
           </div>
-          <div className=" relative top-0 left-0 col-span-2">
+          {/* <div className=" relative top-0 left-0 col-span-2">
             <div className="absolute left-0 top-0 resident-img cursor-pointer"></div>
             <img className="w-full h-full object-cover rounded-[10px]" src={getImgRendering(10)} alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
