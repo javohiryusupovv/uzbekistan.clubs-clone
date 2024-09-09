@@ -26,12 +26,12 @@ function PartnyorComponent() {
   }, []);
 
   return (
-    <div className="mb-[200px] py-[80px] bg-[#181818]">
+    <div className="mb-[100px] py-[80px] bg-[#181818]">
       <div className="container">
         <div className="relative top-0 left-0">
           <article className="flex justify-between items-center mb-[35px]">
             <h1 className="text-5xl uppercase font-semibold text-white">
-              Partnyors
+              Partners
             </h1>
             <div className="slide-btn">
               <button className="swiper-button-next">

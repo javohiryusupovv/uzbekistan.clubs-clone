@@ -18,6 +18,7 @@ export default {
         'border-color': "#fec775",
         'textColor': '#fec775',
         'customColor': 'rgba(254, 199, 117, 0.2)',
+        'btnColor': "#f8c171",
       },
       borderWidth: {
         '1': '1px',

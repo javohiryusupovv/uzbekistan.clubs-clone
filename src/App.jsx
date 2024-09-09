@@ -20,6 +20,7 @@ import CompatriotNews from "./Components/CompatriotNews";
 import ProjectComponent from './Components/ProjectComponent';
 import PartnyorComponent from "./Components/PartnyorComponent";
 import Questions from './Components/TopQuestions';
+import ResidentAloqa from "./Components/ResidentAloqa";
 
 function App() {
   const [isplaying, setPlaying] = useState(false);
@@ -55,7 +56,7 @@ function App() {
               <ProjectComponent/>
               <Questions/>
               <PartnyorComponent/>
-              
+              <ResidentAloqa/>
             </>,
           ],
         },

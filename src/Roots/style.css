@@ -1,0 +1,19 @@
+.lang {
+  transition: all 0.4s;
+}
+.lang:hover {
+  color: white;
+  background-color: rgba(47, 47, 47, 0.4);
+}
+
+.language-wrapper {
+  transform: translateY(30px);
+  transition: all 0.6s;
+  opacity: 0;
+  box-shadow: 0px 0px 3px gray;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
