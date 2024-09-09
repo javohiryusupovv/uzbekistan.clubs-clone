@@ -1,4 +1,4 @@
-# Uzbekistan Club - React JS Website
+# Uzbekistan Club - Clone
 
 ## Project Overview
 
