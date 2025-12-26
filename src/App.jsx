@@ -8,7 +8,6 @@ import HomeComponent from "./Pages/HomeComponent";
 import NavbarRoot from "./Roots/NavbarLayouts";
 import AboutComponent from "./Pages/AboutComponent";
 import ProjectsComponent from "./Pages/ProjectsComponent";
-// import MasterResidents from "./Pages/MasterResidents";
 import ResidentsComponent from "./Pages/ResidentsComponent";
 import MediaResidentsComp from "./Pages/MediaResidentsComp";
 import { faVolumeLow } from "@fortawesome/free-solid-svg-icons";
